@@ -28,7 +28,7 @@ public class FileProcess {
 	 * This function removes all punctuation and symbols from all files in the
 	 * folder
 	 * 
-	 * @return true is succesful, false otherwise
+	 * @return true is successful, false otherwise
 	 */
 	void preProcess() {
 
@@ -59,6 +59,8 @@ public class FileProcess {
 					}
 					line = br.readLine();
 				}
+				br.close();
+				fr.close();
 			} catch (FileNotFoundException fNFE) {
 				fNFE.printStackTrace();
 			} catch (IOException iOE) {
